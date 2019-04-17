@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,8 +45,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boss.cs" />
+    <Compile Include="bullet.cs" />
+    <Compile Include="FireBall.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +59,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeBomer.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +85,131 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ammo-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speedzombie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speedyzombie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpzombie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpzombieangry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpzombiesmile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\szombie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\szombieangry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zombiedie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameover.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normalboss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackboss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scaryboss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timebomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bangbomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireToLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireToRight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animexplosion.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
