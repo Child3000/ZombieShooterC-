@@ -12,7 +12,7 @@ namespace zombieShooter
     class bullet
     {
         public string direction;
-        public int speed = 20;
+        public int speed = 40;
 
         PictureBox Bullet = new PictureBox();
         Timer tm = new Timer();
@@ -26,6 +26,22 @@ namespace zombieShooter
             Bullet.BackColor = System.Drawing.Color.White;
             Bullet.Size = new Size(5, 5);
             Bullet.Tag = "bullet";
+
+            Bullet.Left = bulletLeft;
+            Bullet.Top = bulletTop;
+            Bullet.BringToFront();
+            form.Controls.Add(Bullet);
+
+            tm.Interval = speed;
+            tm.Tick += new EventHandler(tm_Tick);
+            tm.Start();
+        }
+
+        public void mkSpecialBullet(Form form)
+        {
+            Bullet.BackColor = System.Drawing.Color.Gold;
+            Bullet.Size = new Size(10, 10);
+            Bullet.Tag = "sbullet";
 
             Bullet.Left = bulletLeft;
             Bullet.Top = bulletTop;
